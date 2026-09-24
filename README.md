@@ -24,15 +24,15 @@ DATA SOURCES:
 All sources are authorized for educational scraping:
 
 1. OWASP - https://owasp.org/www-community/attacks/SQL_Injection
-   Purpose: Security education, explicitly allows scraping
+   Purpose: Security education, explicitly allows scraping.
    In current version (v0.1) outputs usable data.
    
 3. StackOverflow API - https://api.stackexchange.com/2.3/search/advanced
-   Purpose: Official API, no ToS violation
+   Purpose: Official API, no ToS violation.
    In current version (v0.1) only outputs URL's cannot be used unless re-inputed.
    
 4. PyPI - https://pypi.org/project/
-   Purpose: Official Python package index
+   Purpose: Official Python package index.
    In current version (v0.1) outputs Error 404.
 
 
