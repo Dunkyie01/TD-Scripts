@@ -1,8 +1,8 @@
-"""
-Web scraping scripts to extract training examples from various sources for use in AI model training.
-Install required packages: pip install requests beautifulsoup4 selenium lxml
-!!V0.1!!
-"""
+
+#Web scraping scripts to extract training examples from various sources for use in AI model training.
+#Install required packages: pip install requests beautifulsoup4 selenium lxml
+#!!V0.1!!
+
 
 import requests
 from bs4 import BeautifulSoup 
@@ -14,7 +14,7 @@ import urllib.parse
 
 
 def check_robots_txt(url):
-    """Check if scraping is allowed by robots.txt"""
+    #Check if scraping is allowed by robots.txt
     try:
         rp = urllib.robotparser.RobotFileParser()
         base_url = urllib.parse.urljoin(url, '/robots.txt')
@@ -33,7 +33,7 @@ def check_robots_txt(url):
 
 
 def scrape_owasp_sql_injection():
-    """Scrape OWASP SQL Injection examples"""
+    #Scrape OWASP SQL Injection examples
     print("[*] Scraping OWASP SQL Injection Prevention...")
     
     url = "https://owasp.org/www-community/attacks/SQL_Injection"
@@ -80,7 +80,7 @@ def scrape_owasp_input_validation():
     """Scrape OWASP Input Validation examples"""
     print("[*] Scraping OWASP Input Validation...")
     
-    url = "https://owasp.org/www-community/attacks/Command_Injection"
+    url = "https://owasp.org/www-community/attacks/Command_Injection" #This is the URL the script will check, change as needed
     
     # Check robots.txt
     if not check_robots_txt(url):
@@ -118,7 +118,7 @@ def scrape_stackoverflow_security():
     print("[*] Scraping StackOverflow security answers...")
     
     # Using StackExchange API (no authentication required for basic queries)
-    url = "https://api.stackexchange.com/2.3/search/advanced"
+    url = "https://api.stackexchange.com/2.3/search/advanced" #This is the URL the script will check, change as needed
     
     params = {
         'order': 'desc',
@@ -158,7 +158,7 @@ def scrape_pypi_security_libs():
     print("[*] Scraping PyPI security libraries...")
     
     # Check robots.txt
-    if not check_robots_txt("https://pypi.org/"):
+    if not check_robots_txt("https://pypi.org/"): #This is the URL the script will check, change as needed
         print("✗ Skipped: robots.txt disallows scraping PyPI")
         return False
     
@@ -238,3 +238,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+##EOF##
