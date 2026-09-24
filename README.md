@@ -32,4 +32,8 @@ All sources are authorized for educational scraping:
    
 3. PyPI - https://pypi.org/project/
    Purpose: Official Python package index
+   In current version (v0.1) only outputs URL's cannot be used unless reinputed
+
+   OUTPUT
+1. The Output file should always be in plain text for conversion, any other data format as of v0.1 will be processed as plain text - this can yield some STRANGE results.
 """
